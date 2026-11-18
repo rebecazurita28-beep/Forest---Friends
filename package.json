@@ -1,0 +1,9 @@
+{
+  "name": "forest-friends",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1",
+    "test": "node --test tests/logic.test.mjs && node tests/smoke_level2.mjs && node tests/smoke_story.mjs && node tests/smoke_level3.mjs && node tests/smoke_finale.mjs && node tools/sim_colgante/sim.mjs"
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "_info": {
+    "unidad": "1 unidad = 1 metro",
+    "convencion": "Y arriba, los personajes miran hacia +Z (convención glTF)",
+    "formula": "p_mundo = position + RotY(rotationY_deg) * ( scale * (p_modelo - pivot) )",
+    "nota": "Los archivos .glb originales NO se modifican. Escala uniforme (sin deformación). Valores editables: cambiar targetHeight_m/scale y recargar.",
+    "referencia_de_escala": "Altura de personajes 0.75–1.25 m. Resto de recursos dimensionados respecto a ellos."
+  },
+  "models": {
+    "berry": {
+      "file": "berry.glb",
+      "role": "character",
+      "targetHeight_m": 1.1,
+      "scale": 0.25193,
+      "rotationY_deg": -90,
+      "pivot": [
+        0.004,
+        -2.242,
+        -0.023
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "panda rojo (aparente)",
+      "tamano_original_XYZ": [
+        2.54,
+        4.37,
+        3.22
+      ],
+      "tamano_normalizado_XYZ_m": [
+        0.81,
+        1.1,
+        0.64
+      ],
+      "notas": "Miraba a +X: giro de -90°. Pivote movido del centro del cuerpo a los pies."
+    },
+    "cookie": {
+      "file": "cookie.glb",
+      "role": "character",
+      "targetHeight_m": 1.0,
+      "scale": 0.20829,
+      "rotationY_deg": -90,
+      "pivot": [
+        -0.038,
+        -2.36,
+        -0.006
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "osezno marrón (aparente)",
+      "tamano_original_XYZ": [
+        2.01,
+        4.8,
+        4.3
+      ],
+      "tamano_normalizado_XYZ_m": [
+        0.9,
+        1.0,
+        0.42
+      ],
+      "notas": "Miraba a +X: giro de -90°. T-pose. Pivote a los pies."
+    },
+    "Toffee": {
+      "file": "Toffee.glb",
+      "role": "character",
+      "targetHeight_m": 1.25,
+      "scale": 0.28252,
+      "rotationY_deg": -90,
+      "pivot": [
+        -0.057,
+        -2.321,
+        0.017
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "oso ciruela (aparente)",
+      "tamano_original_XYZ": [
+        1.52,
+        4.42,
+        3.95
+      ],
+      "tamano_normalizado_XYZ_m": [
+        1.12,
+        1.25,
+        0.43
+      ],
+      "notas": "Miraba a +X: giro de -90°. T-pose. Pivote a los pies."
+    },
+    "Bobby": {
+      "file": "Bobby.glb",
+      "role": "character",
+      "targetHeight_m": 0.8,
+      "scale": 0.23672,
+      "rotationY_deg": 0,
+      "pivot": [
+        -0.004,
+        -1.787,
+        -0.278
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "lobo/perro gris",
+      "tamano_original_XYZ": [
+        0.8,
+        3.38,
+        4.22
+      ],
+      "tamano_normalizado_XYZ_m": [
+        0.19,
+        0.8,
+        1.0
+      ],
+      "notas": "Ya miraba a +Z; solo se corrige escala y pivote (centro de las patas, a ras de suelo)."
+    },
+    "zorro": {
+      "file": "zorro.glb",
+      "role": "character",
+      "targetHeight_m": 0.75,
+      "scale": 0.13887,
+      "rotationY_deg": 180,
+      "pivot": [
+        0.001,
+        0.024,
+        -0.217
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "zorro",
+      "tamano_original_XYZ": [
+        1.45,
+        5.4,
+        9.14
+      ],
+      "tamano_normalizado_XYZ_m": [
+        0.2,
+        0.75,
+        1.27
+      ],
+      "notas": "Miraba a -Z: giro de 180°. Su pivote original estaba en la base pero descentrado en Z."
+    },
+    "Pastel_de_fresas": {
+      "file": "Pastel_de_fresas.glb",
+      "role": "object",
+      "targetHeight_m": 0.5,
+      "scale": 0.1303,
+      "rotationY_deg": 0,
+      "pivot": [
+        -0.01,
+        -0.002,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "pastel de fresas (meta/recompensa)",
+      "tamano_original_XYZ": [
+        2.96,
+        3.84,
+        2.96
+      ],
+      "tamano_normalizado_XYZ_m": [
+        0.39,
+        0.5,
+        0.39
+      ],
+      "notas": "Ya apoyado en y=0 y orientado; solo escala. Sin orientación frontal definida (es simétrico)."
+    },
+    "fresas": {
+      "file": "fresas.glb",
+      "role": "object",
+      "targetHeight_m": 0.45,
+      "scale": 0.05986,
+      "rotationY_deg": 0,
+      "pivot": [
+        20.306,
+        -3.668,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "canasta de fresas (coleccionable)",
+      "tamano_original_XYZ": [
+        9.61,
+        7.52,
+        9.61
+      ],
+      "tamano_normalizado_XYZ_m": [
+        0.58,
+        0.45,
+        0.58
+      ],
+      "notas": "Estaba desplazada ~20 unidades en X y hundida bajo el origen; se centra y se apoya en y=0. Pesa 46k triángulos: conviene una versión ligera."
+    },
+    "Cueva": {
+      "file": "Cueva.glb",
+      "role": "scene",
+      "scale": 0.7,
+      "rotationY_deg": 0,
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "nivel: cueva",
+      "tamano_original_XYZ": [
+        25.6,
+        7.6,
+        22.0
+      ],
+      "tamano_normalizado_XYZ_m": [
+        17.92,
+        5.32,
+        15.4
+      ],
+      "notas": "Suelo ya en y=0 y centrado. La ENTRADA está en +Z (pilares en z≈4.7–6.5 m); para entrar, el personaje camina hacia -Z."
+    },
+    "paramo": {
+      "file": "paramo.glb",
+      "role": "scene",
+      "scale": 0.6,
+      "rotationY_deg": 0,
+      "pivot": [
+        -12.0,
+        2.33,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "nivel: páramo",
+      "tamano_original_XYZ": [
+        78.27,
+        24.22,
+        107.01
+      ],
+      "tamano_normalizado_XYZ_m": [
+        46.96,
+        14.53,
+        64.2
+      ],
+      "notas": "Origen movido al centro del terreno (antes estaba en el centro de las montañas, ~(-21,14,-2)) y suelo medio en y=0. Sendero ≈ eje Z."
+    },
+    "puente": {
+      "file": "puente.glb",
+      "role": "scene",
+      "scale": 1.5,
+      "rotationY_deg": 0,
+      "pivot": [
+        0.0,
+        0.0,
+        -6.34
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "nivel: pradera con río y puente",
+      "tamano_original_XYZ": [
+        26.14,
+        3.9,
+        37.86
+      ],
+      "tamano_normalizado_XYZ_m": [
+        39.21,
+        5.86,
+        56.78
+      ],
+      "notas": "Origen en el centro del terreno, suelo en y=0. Río cruza en X; el puente va en el eje Z. Tablero a +0.56 m sobre el camino (sin rampa)."
+    },
+    "Puente_colgante": {
+      "file": "Puente_colgante.glb",
+      "role": "scene",
+      "scale": 1.0,
+      "rotationY_deg": 0,
+      "pivot": [
+        0.0,
+        1.37,
+        0.0
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "descripcion": "escenario: islas con puentes colgantes (nivel por confirmar)",
+      "tamano_original_XYZ": [
+        44.0,
+        9.16,
+        34.0
+      ],
+      "tamano_normalizado_XYZ_m": [
+        44.0,
+        9.16,
+        34.0
+      ],
+      "notas": "Centrado. Suelo medio de las 3 islas en y=0 (alturas reales entre -0.1 y +0.2 m). Puentes en eje X, con caída suave en el centro (colgante)."
+    }
+  },
+  "anchors_referencia": {
+    "Cueva": {
+      "entrada_centro": [
+        0,
+        0,
+        5.6
+      ],
+      "hueco_entre_pilares_m": 5.67,
+      "altura_pilares_m": 3.08,
+      "altura_boveda_min_m": 2.38
+    },
+    "puente": {
+      "tablero_centro_x_m": 1.74,
+      "tablero_z_m": [
+        -3.6,
+        4.9
+      ],
+      "ancho_tablero_m": 3.93,
+      "altura_tablero_sobre_camino_m": 0.56
+    },
+    "Puente_colgante": {
+      "puente_izq_x_m": [
+        -7.8,
+        -2.8
+      ],
+      "puente_der_x_m": [
+        4.4,
+        9.2
+      ],
+      "ancho_m": 1.9,
+      "escalon_max_m": 0.2
+    },
+    "paramo": {
+      "sendero_inicio_xz": [
+        6.8,
+        -26.3
+      ],
+      "sendero_fin_xz": [
+        4.8,
+        25.7
+      ],
+      "ancho_sendero_m": [
+        3.5,
+        5.5
+      ],
+      "pendiente_max_pct": 6
+    }
+  }
+}

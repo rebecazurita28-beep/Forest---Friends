@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forest Friends - verificación de escala</title>
+<style>
+  :root { --crema:#FFFFFE; --ocre:#9B6108; --rojo:#942221; --oliva:#8C8D4C; --arena:#D9CFC3; }
+  html, body { margin:0; height:100%; background:var(--arena); font-family: system-ui, sans-serif; color:#222; overflow:hidden; }
+  canvas { display:block; }
+  #bar { position:fixed; top:0; left:0; right:0; display:flex; gap:6px; flex-wrap:wrap; padding:8px; background:rgba(255,255,254,.92); border-bottom:2px solid var(--ocre); }
+  #bar button { border:2px solid var(--ocre); background:var(--crema); color:var(--ocre); border-radius:8px; padding:6px 10px; font-weight:700; cursor:pointer; }
+  #bar button.on { background:var(--ocre); color:var(--crema); }
+  #bar label { align-self:center; margin-left:8px; font-size:13px; }
+  #report { position:fixed; right:8px; bottom:8px; max-width:430px; max-height:55vh; overflow:auto; background:rgba(255,255,254,.95);
+            border:2px solid var(--oliva); border-radius:8px; padding:8px 10px; font:12px/1.4 ui-monospace, monospace; white-space:pre-wrap; }
+  .ok { color:#2f6b2f; } .bad { color:var(--rojo); font-weight:700; }
+</style>
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="bar"></div>
+<div id="report">Cargando…</div>
+<script type="module" src="./src/verify.js"></script>
+</body>
+</html>

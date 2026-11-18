@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forest Friends</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="loading" class="screen">
+  <img class="logo" src="./assets/ui/logo.png" alt="Forest Friends">
+  <div id="loadbar"><div></div></div>
+  <p id="loadtext">Cargando modelos…</p>
+</div>
+
+<div id="menu" class="screen hidden">
+  <img class="logo small" src="./assets/ui/logo.png" alt="Forest Friends">
+  <div id="card">
+    <div id="cardTag"></div>
+    <h2 id="cardName"></h2>
+    <p id="cardBio"></p>
+    <div class="row"><button id="prevBtn" class="ghost" aria-label="Anterior">◀</button><span id="cardIdx"></span><button id="nextBtn" class="ghost" aria-label="Siguiente">▶</button></div>
+  </div>
+  <div id="dock">
+    <div id="roster"></div>
+    <button id="startBtn" class="big">¡Comenzar la aventura!</button>
+    <p class="hint">← → para conocer a los amigos · Espacio / Enter para comenzar</p>
+  </div>
+</div>
+
+<div id="hud" class="hidden">
+  <div id="objective"></div>
+  <div id="progress"></div>
+  <div id="party"></div>
+  <div id="prompt" class="hidden"></div>
+  <div id="hint"></div>
+</div>
+
+<div id="dialog" class="hidden"><div id="dlgName"></div><p id="dlgText"></p><div id="dlgHint">E · continuar</div></div>
+<div id="riddle" class="hidden" role="dialog" aria-labelledby="rTitle">
+  <div id="rBox">
+    <button id="rClose" class="ghost" aria-label="Cerrar">✕</button>
+    <div id="rTitle"></div>
+    <p id="rText"></p>
+    <div id="rOpts"></div>
+    <div id="rFeedback" class="hidden"></div>
+    <div id="rHint" class="hidden"></div>
+    <div id="rFoot">Elige con 1-4, ↑ ↓ + Enter, o con el ratón · ESC para cerrar</div>
+  </div>
+</div>
+<div id="complete" class="screen hidden"><h2 id="cTitle"></h2><p id="cText"></p><div id="cBtns"></div></div>
+<div id="caption" class="hidden"></div>
+<div id="cook" class="hidden"></div>
+<div id="ending" class="screen hidden">
+  <div id="endBox">
+    <img id="endLogo" class="logo end" src="./assets/ui/logo.png" alt="Forest Friends">
+    <h1 id="endTitle"></h1>
+    <p id="endPhrase"></p>
+    <div id="endBtns"></div>
+    <div id="credits"></div>
+  </div>
+</div>
+<div id="react" class="hidden" data-mode=""><div id="reactMsg"></div><div id="reactRing"><i id="reactFill"></i><b id="reactKey">ESPACIO</b></div><div id="reactPips"></div><div id="reactSub"></div></div>
+<button id="skip" class="hidden">Saltar ▶ (Espacio)</button>
+
+<div id="pause" class="screen hidden">
+  <h2>Pausa</h2>
+  <button id="resumeBtn" class="big">Reanudar</button>
+  <button id="restartBtn">Reiniciar nivel</button>
+  <button id="menuBtn">Menú principal</button>
+  <p class="hint">ESC para volver al juego</p>
+</div>
+
+<div id="fade"></div>
+<div id="toast" class="hidden"></div>
+<div id="err" class="hidden"></div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
